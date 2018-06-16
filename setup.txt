@@ -1,3 +1,5 @@
+** Install Git if needed.
+
 # If you're starting from a computer that you've never use Git on, add a new username and email so when you push any code to the server, it shows who committed the changes:
 (home)$ git config --global --add user.name (your_name)
 (home)$ git config --global --add user.email (your_email)
@@ -7,6 +9,10 @@
 
 # To verify the changes are made to the configuration file:
 (home)$ git config --global --list
+
+# Install docker, https://docs.docker.com/install/
+
+# Install docker-compose, https://docs.docker.com/compose/install/
 
 ------------------------------------------------------------------------------------------
 
