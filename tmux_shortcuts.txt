@@ -1,0 +1,9 @@
+# Swap tmux panes order:
+C-a + {
+C-a + }
+
+# New window:
+C-a + c
+
+# Move cursor:
+C-a + [

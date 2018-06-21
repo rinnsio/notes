@@ -14,6 +14,14 @@
 
 # Install docker-compose, https://docs.docker.com/compose/install/
 
+# Install tmux:
+(home)$ sudo apt-get install tmux
+
+# Copy the ".tmux.conf" file from "https://github.com/rinnsio/notes/blob/master/.tmux.conf" to the "home" directory.  Then launch tmux to start coding:
+(any_dir)$ tmux
+
+** If vi did not work properly, copy the ".vimrc" file from "https://github.com/rinnsio/notes/blob/master/.vimrc" to the "home" directory.  Then relaunch vi.
+
 ------------------------------------------------------------------------------------------
 
 ** If you have to create a new project, create a new repository on the website (ex. GitHub), then create a new branch if neccessary.
