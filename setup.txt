@@ -1,6 +1,7 @@
 ** Install Git if needed.
 
-# If you're starting from a computer that you've never use Git on, add a new username and email so when you push any code to the server, it shows who committed the changes:
+# If you're starting from a computer that you've never use Git on, add a new username and email
+  so when you push any code to the server, it shows who committed the changes:
 (home)$ git config --global --add user.name (your_name)
 (home)$ git config --global --add user.email (your_email)
 
@@ -17,19 +18,24 @@
 # Install tmux:
 (home)$ sudo apt-get install tmux
 
-# Copy the ".tmux.conf" file from "https://github.com/rinnsio/notes/blob/master/.tmux.conf" to the "home" directory.  Then launch tmux to start coding:
+# Copy the ".tmux.conf" file from "https://github.com/rinnsio/notes/blob/master/.tmux.conf"
+  to the "home" directory.  Then launch tmux to start coding:
 (any_dir)$ tmux
 
-** If vi did not work properly, copy the ".vimrc" file from "https://github.com/rinnsio/notes/blob/master/.vimrc" to the "home" directory.  Then relaunch vi.
+** If vi did not work properly, copy the ".vimrc" file from
+   "https://github.com/rinnsio/notes/blob/master/.vimrc" to the "home" directory.  Then
+   relaunch vi.
 
 ------------------------------------------------------------------------------------------
 
-** If you have to create a new project, create a new repository on the website (ex. GitHub), then create a new branch if neccessary.
+** If you have to create a new project, create a new repository on the website (ex. GitHub),
+   then create a new branch if neccessary.
 
 # Choose a directory you want the code to be stored at.  
 (home)$ cd (directory_path)
 
-** ex. If you need to clone the "Test" project from GitHub, so "Test" project will be stored at your local working directory "Documents":
+** ex. If you need to clone the "Test" project from GitHub, so "Test" project will be stored at
+   your local working directory "Documents":
 (home)$ cd Desktop/Documents
 
 # Clone the git repository:
@@ -39,7 +45,8 @@
 (preferred_dir)$ cd (project_dir)
 (project_dir)$ vi (file)
 
-# Before you push your code, check the current branch you're in and what files you've created/modified:
+# Before you push your code, check the current branch you're in and what files you've
+  created/modified:
 (project_dir)$ git status
 
 ** Find out all the branch your project has on the server:
@@ -64,10 +71,13 @@
 
 ******************************************************************************************
 
-# To create local repository on command line.  First, create a project folder on your local machine, then cd to your project directory:
+# To create local repository on command line.  First, create a project folder on your local
+  machine, then cd to your project directory:
 (project_dir)$ git init
 
-# To push your project (that has a .git file) up to the server, create a new repository on the website (ex. GitHub).  Follow the instruction shown on the next page on how to add an existed project to the remote repository.
+# To push your project (that has a .git file) up to the server, create a new repository on the
+  website (ex. GitHub).  Follow the instruction shown on the next page on how to add an existed
+  project to the remote repository.
 
 ******************************************************************************************
 
@@ -82,12 +92,16 @@
 ** To build an image based on the Dockerfile without cache:
 (project_dir)$ sudo docker build --no-cache .
 
-** If you're getting the error message, "Temporary failure resolving 'xxxxxxxxxx', the DNS servers might be blocked by your company.  (Solution from https://development.robinwinslow.uk/2016/06/23/fix-docker-networking-dns/).
+** If you're getting the error message, "Temporary failure resolving 'xxxxxxxxxx', the DNS servers
+   might be blocked by your company.  (Solution from
+   https://development.robinwinslow.uk/2016/06/23/fix-docker-networking-dns/).
 
    Step 1, find out the primary and secondary DNS server addresses:
    (home)$ nmcli dev show | grep 'IP4.DNS'
 
-   Step 2, create a file "/etc/docker/daemon.json", save the following code inside the file.  Replace "(IP4.DNS[1])" and "(IP4.DNS[2])" with the DNS server addresses found in Step 1, then restart all terminals:
+   Step 2, create a file "/etc/docker/daemon.json", save the following code inside the file.  Replace
+   "(IP4.DNS[1])" and "(IP4.DNS[2])" with the DNS server addresses found in Step 1, then restart all
+   terminals:
    (home)$ sudo vi /etc/docker/daemon.json
 
    {                                                                          
