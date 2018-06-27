@@ -22,6 +22,11 @@
   to the "home" directory.  Then launch tmux to start coding:
 (any_dir)$ tmux
 
+** If changes made in the ".tmux.conf" file is not refreshed, kill all tmux sessions all the way
+   down, then start a new tmux session:
+(any_dir)$ tmux kill-server
+(any_dir)$ tmux
+
 ** If vi did not work properly, copy the ".vimrc" file from
    "https://github.com/rinnsio/notes/blob/master/.vimrc" to the "home" directory.  Then
    relaunch vi.
@@ -68,6 +73,14 @@
 
 ** To check what commits are made:
 (project_dir)$ git log
+
+** To get the updated version of the code from the remote repository, but not replacing the
+   local working files:
+(project_dir)$ git fetch origin
+
+** To replace your local working files with the most updated version of the code from the remote
+   repository:
+(project_dir)$ git pull origin (branch_name)
 
 ******************************************************************************************
 
