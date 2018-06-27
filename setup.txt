@@ -27,9 +27,28 @@
 (any_dir)$ tmux kill-server
 (any_dir)$ tmux
 
-** If vi did not work properly, copy the ".vimrc" file from
-   "https://github.com/rinnsio/notes/blob/master/.vimrc" to the "home" directory.  Then
-   relaunch vi.
+# To use solarized colorscheme in terminal in Ubuntu:
+Click Terminal tab -> Preferences -> Unnamed -> Colors -> Text and Background Color -> Uncheck Use 
+colors from system theme -> Built-in schemes -> choose Solarized dark -> Palette -> Built-in schemes
+ -> choose Solarized -> Close
+
+# To use solarized colorscheme in vim:
+(home)$ mkdir .vim
+(home)$ cd .vim
+(home/.vim)$ mkdir bundle
+(home/.vim)$ mkdir colors
+(home/.vim)$ cd bundle
+(home/.vim/bundle)$ git clone https://github.com/altercation/vim-colors-solarized.git
+(home/.vim/bundle)$ cd
+(home)$ cp ~/.vim/bundle/vim-colors-solarized/colors/solarized.vim ~/.vim/colors/
+
+  Copy the ".vimrc" file from "https://github.com/rinnsio/notes/blob/master/.vimrc" to the "home" 
+  directory.  Then relaunch vi.
+
+** If the error message "E319: Sorry, the command is not available in this version: syntax on" is
+   shown:
+(home)$ sudo apt-get install vim-gui-common
+(home)$ sudo apt-get install vim-runtime
 
 ------------------------------------------------------------------------------------------
 
