@@ -154,6 +154,11 @@ git clone https://github.com/altercation/vim-colors-solarized.git ~/.vim/bundle/
    (project_dir)$ sudo service docker restart
    (project_dir)$ sudo docker build .
 
+** If you're getting the error message, "ERROR: Couldn't connect to Docker daemon at 
+   http+docker://localunixsocket - is it running?  If it's at a non-standard location, specify the 
+   URL with the DOCKER_HOST environment variable.":
+   (project_dir)$ sudo service docker restart
+
 # To shown all exist docker images:
 (project_dir)$ sudo docker images
 
