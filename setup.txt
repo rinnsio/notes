@@ -70,9 +70,6 @@ git clone https://github.com/altercation/vim-colors-solarized.git ~/.vim/bundle/
 ** To build an image based on the Dockerfile with a tag:
 (project_dir)$ sudo docker build -t (tag_name) .
 
-** To build an image based on the Dockerfile without cache:
-(project_dir)$ sudo docker build --no-cache .
-
 ** If you're getting the error message, "Temporary failure resolving 'xxxxxxxxxx', the DNS servers
    might be blocked by your company.  (Solution from
    https://development.robinwinslow.uk/2016/06/23/fix-docker-networking-dns/).
@@ -89,9 +86,9 @@ git clone https://github.com/altercation/vim-colors-solarized.git ~/.vim/bundle/
       "dns": ["(IP4.DNS[1])", "(IP4.DNS[2])"]                                                                           
    } 
 
-   Step 3, restart docker.  Then build the image again:
+   Step 3, restart docker.  Then build the image again from scratch:
    (project_dir)$ sudo service docker restart
-   (project_dir)$ sudo docker build .
+   (project_dir)$ sudo docker build --no-cache .
 
 ** If you're getting the error message, "ERROR: Couldn't connect to Docker daemon at 
    http+docker://localunixsocket - is it running?  If it's at a non-standard location, specify the 
