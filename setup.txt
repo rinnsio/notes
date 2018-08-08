@@ -30,19 +30,17 @@
 # Copy the ".vimrc" file from "https://github.com/rinnsio/notes/blob/master/.vimrc" to the "home" 
   directory.
 
-# Install pathogen.vim in order to install plugins easily.  In any directory, copy and paste the
-  below command:
-mkdir -p ~/.vim/autoload ~/.vim/bundle && \
-curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
-
 # To use solarized colorscheme in terminal in Ubuntu:
 Click Terminal tab -> Preferences -> Unnamed -> Colors -> Text and Background Color -> Uncheck Use 
 colors from system theme -> Built-in schemes -> choose Solarized dark -> Palette -> Built-in schemes
  -> choose Solarized -> Close
 
+# Install pathogen.vim in order to install plugins easily.  In any directory, copy and paste the
+  below command:
+mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+
 # To use solarized colorscheme in vim:
-(home)$ mkdir .vim
-(home)$ mkdir .vim/bundle
 (home)$ mkdir .vim/colors
 (any_dir)$ 
 git clone https://github.com/altercation/vim-colors-solarized.git ~/.vim/bundle/vim-colors-solarized
