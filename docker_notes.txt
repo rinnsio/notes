@@ -1,3 +1,5 @@
+## Use template from "https://github.com/zhao-lin-li/project_template_with_containers" to start a new project.
+
 # In order to build a docker container, the files "Dockerfile" and "docker-compose.yml" are needed.
 
 # To build an image based on the Dockerfile:
