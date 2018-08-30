@@ -120,4 +120,35 @@ $ docker container run <image:version> <command_run_inside_container_that overwr
   parameter:
 $ docker container run <image:version> <default_parameter_for_ENTRYPOINT_command>
 
+# To list all networks:
+$ docker network ls
 
+# To display network info:
+$ docker network inspect <network_name>
+
+# To create a new bridge network:
+$ docker network create <network_name>
+
+# To create a new bridge network by using the bridge driver:
+$ docker network create --driver bridge <network_name>
+
+# To start a container with assigned name and attach it to a specific network:
+$ docker container run -d --name <container_name> --network <network_name> <image:version> <command_run inside_container>
+
+# To attach running container to a specific network:
+$ docker network connect <network_name> <container_name>
+
+# To test connection between 2 containers:
+$ docker container exec <container_name1> ping <container_name2>
+
+# To start a container and forward host port to container port:
+$ docker container run -d -p <host_port>:<container_port> <command_run_inside_container>
+
+# To show port mapping:
+$ docker container port <container_id>
+
+# To show webpage in terminal:
+$ curl -4 localhost:<port_name>
+
+# To start a container and map all ports mentioned in the EXPOSE section if EXPOSE is used in Dockerfile:
+$ docker container run -d -P <container_name>
