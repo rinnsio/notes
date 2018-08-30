@@ -38,9 +38,6 @@
 # To use the docker container based on the "docker-compose.yml" file w/ bash:
   (project_dir)$ sudo docker-compose run (container_name (first_line_under_"services")) bash
 
-# To remove docker image:
-(project_dir)$ sudo docker rmi (image_id)
-
 
 ## USEFUL COMMANDS ##
 
@@ -53,7 +50,7 @@ $ docker container run -it <image:version> bash
 # To launch a bash shell in a running container:
 $ docker container exec -it <container ID> bash
 
-# To list all the running and exited containers:
+# To list all the running and exited containers (also can see port mappings):
 $ docker container ls -a
 
 # To run command in a running container:
@@ -95,8 +92,23 @@ $ docker image ls
 # To see the history of an image:
 $ docker image history <image_name>
 
+# To download image from Docker Hub:
+$ docker image pull <image:version>
+
+# To login to Docker Hub:
+$ docker login
+
+# To re-tag existing image:
+$ docker image tag <exist_image:exist_version> <Docker ID>/<new_image:new_version>
+
+# To push image to Docker Hub:
+$ docker image push <Docker ID>/<image:version>
+
 # To build image w/ tag based on Dockerfile:
 $ docker image build -t <tag_name> .
+
+# To remove image:
+$ docker image rm <image:version>
 
 # To run container based on Dockerfile that has a CMD or ENTRYPOINT+CMD command:
 $ docker container run <image:version>
@@ -107,3 +119,5 @@ $ docker container run <image:version> <command_run_inside_container_that overwr
 # To run container based on Dockerfile that has ENTRYPOINT but no/replacing CMD default
   parameter:
 $ docker container run <image:version> <default_parameter_for_ENTRYPOINT_command>
+
+
