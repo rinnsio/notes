@@ -150,5 +150,13 @@ $ docker container port <container_id>
 # To show webpage in terminal:
 $ curl -4 localhost:<port_name>
 
-# To start a container and map all ports mentioned in the EXPOSE section if EXPOSE is used in Dockerfile:
+# To start a container and map all ports mentioned in the EXPOSE section if EXPOSE is used in
+  Dockerfile:
 $ docker container run -d -P <container_name>
+
+# To start services (containers) that uses the docker-compose.yml file in a project dir (this
+  pull images required in the docker-compose file from Docker Hub):
+(project_dir)$ docker-compose up -d
+
+# To list all services (containers) running in the project dir:
+(project_dir)$ docker-compose ps
