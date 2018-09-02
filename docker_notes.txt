@@ -80,6 +80,9 @@ $ docker container stop <container ID>
 # To delete container:
 $ docker container rm -f <container ID>
 
+# To remove all containers:
+$ docker container rm -f $(docker container ls -aq)
+
 # To see the changes to the image for a container:
 $ docker container diff <container ID>
 
@@ -160,3 +163,48 @@ $ docker container run -d -P <container_name>
 
 # To list all services (containers) running in the project dir:
 (project_dir)$ docker-compose ps
+
+# To see logs generated from docker-compose:
+(project_dir)$ docker-compose logs
+
+# To watch the last 10 lines of log generated from docker-compose:
+(project_dir)$ docker-compose logs --tail 10 --follow
+
+# To start 2 (multiple) containers from the same service listed in the docker-compose file:
+(project_dir)$ docker-compose scale <service_name_from_docker-compose_file=2
+
+# To shutdown the app (also shutdown the containers) started by docker-compose:
+(project_dir)$ docker-compose down
+
+# To initialize a swarm on one node (one VM). Current node then becomes the manager node by
+  default:
+$ docker swarm init
+
+# To list all the nodes in the swarm on manager node (this will not work on worker node):
+(manager_node)$ docker node ls
+
+# To create a service on the swarm:
+(manager_node)$ docker service create --replicas <number_of_services> --name <service_name> <image:version> <command_to_run when_service_starts>
+
+# To list processes started for the service:
+$ docker service ps <service_name>
+
+# On manager node, get the token to use to add worker nodes to the swarm:
+(manager_node)$ docker swarm join-token worker
+
+# To promote worker nodes to manager nodes on existing manager node:
+(manager_node)$ docker node promote <node_name1> <node_name2>
+
+# To see the log of the service on manager node:
+(manager_node)$ docker service logs <service_name>
+
+# To force-rebalance tasks on manager node (service tasks will be restarted):
+(manager_node)$ docker service update --force <service_name>
+
+# To change service (container) to read-only mode:
+$ docker service update <container_name> --read-only
+
+# To remove all existing services:
+$ docker service rm $(docker service ls -q)
+
+
