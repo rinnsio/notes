@@ -15,6 +15,12 @@
 
 # Install docker-compose, https://docs.docker.com/compose/install/
 
+** To use docker without sudo, create a docker group and add current user into it, activate the
+   changes after that:
+   $ sudo groupadd docker
+   $ sudo usermod -aG docker $USER
+   $ newgrp docker
+
 # Install tmux:
 (home)$ sudo apt-get install tmux
 
