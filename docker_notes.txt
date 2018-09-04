@@ -8,7 +8,7 @@
 (project_dir)$ sudo docker build .
 
 ** To build an image based on the Dockerfile with a tag:
-(project_dir)$ sudo docker build -t (tag_name) .
+(project_dir)$ sudo docker build -t <tag_name> .
 
 ** If you're getting the error message, "Temporary failure resolving 'xxxxxxxxxx', the DNS
    servers might be blocked by your company.  (Solution from
@@ -18,12 +18,12 @@
    (home)$ nmcli dev show | grep 'IP4.DNS'
 
    Step 2, create a file "/etc/docker/daemon.json", save the following code inside the file.
-   Replace "(IP4.DNS[1])" and "(IP4.DNS[2])" with the DNS server addresses found in Step 1,
+   Replace "<IP4.DNS[1]>" and "<IP4.DNS[2]>" with the DNS server addresses found in Step 1,
    then restart all terminals:
    (home)$ sudo vi /etc/docker/daemon.json
 
    {                                                                          
-      "dns": ["(IP4.DNS[1])", "(IP4.DNS[2])"]                                                                           
+      "dns": ["<IP4.DNS[1]>", "<IP4.DNS[2]>"]                                                                           
    } 
 
    Step 3, restart docker.  Then build the image again from scratch:
@@ -35,8 +35,8 @@
    the URL with the DOCKER_HOST environment variable.":
    (project_dir)$ sudo service docker restart
 
-# To use the docker container based on the "docker-compose.yml" file w/ bash:
-  (project_dir)$ sudo docker-compose run (container_name (first_line_under_"services")) bash
+# To enter in a specific docker container in the "docker-compose.yml" file w/ bash:
+  (project_dir)$ sudo docker-compose run <container_name (first_line_under_"services")> bash
 
 
 ## USEFUL COMMANDS ##
