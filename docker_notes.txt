@@ -210,15 +210,20 @@ $ docker service rm $(docker service ls -q)
 # To inspect system:
 $ docker system info
 
+# To watch action taken behind the screen by Docker engine:
+$ docker system events
+
 # To delete images that are pulled 6 months ago:
 $ docker system prune --force
 $ docker image prune --all --filter "until=4320h" --force
 
-# CLEAN-UP COMMANDS
+# To find out how much memory Docker is using and how much of this space can be reclaimed:
 (project_dir)$ docker system df
+
+# To reclaim all reclaimable space by removing all unused networks, containers, images and volumes:
 (project_dir)$ docker system prune
 
-# More specific commands for clean-up are:
+# To delete a specific item:
 (project_dir)$ docker image prune [--filter "<image_name>"]
 (project_dir)$ docker container prune [--filter "<container_name>"]
 (project_dir)$ docker volume prune [--filter "<volume_name>"]
