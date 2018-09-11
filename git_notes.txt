@@ -47,6 +47,9 @@
    repository:
 (project_dir)$ git pull origin (branch_name)
 
+** To pull code from submodules after cloning the project:
+(project_dir)$ git submodule update --init
+
 ******************************************************************************************
 
 # To create local repository on command line.  First, create a project folder on your local
