@@ -210,3 +210,13 @@ $ docker service rm $(docker service ls -q)
 # To delete images that are pulled 6 months ago:
 $ docker system prune --force
 $ docker image prune --all --filter "until=4320h" --force
+
+# CLEAN-UP COMMANDS
+(project_dir)$ docker system df
+(project_dir)$ docker system prune
+
+# More specific commands for clean-up are:
+(project_dir)$ docker image prune [--filter "<image_name>"]
+(project_dir)$ docker container prune [--filter "<container_name>"]
+(project_dir)$ docker volume prune [--filter "<volume_name>"]
+(project_dir)$ docker network prune [--filter "<network_name>"]
