@@ -207,6 +207,9 @@ $ docker service update <container_name> --read-only
 # To remove all existing services:
 $ docker service rm $(docker service ls -q)
 
+# To inspect system:
+$ docker system info
+
 # To delete images that are pulled 6 months ago:
 $ docker system prune --force
 $ docker image prune --all --filter "until=4320h" --force
