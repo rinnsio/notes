@@ -50,6 +50,15 @@
 ** To pull code from submodules after cloning the project:
 (project_dir)$ git submodule update --init
 
+** To get the most updated version of the code from master branch without overwritting the 
+   changes made in current branch.  First commit the changes, then rebase from master branch
+   and fix any merge conflicts:
+(project_dir)$ git fetch origin
+(project_dir)$ git checkout master
+(project_dir)$ git rebase origin/master
+(project_dir)$ git checkout your_branch
+(project_dir)$ git rebase master
+
 ******************************************************************************************
 
 # To create local repository on command line.  First, create a project folder on your local
@@ -59,3 +68,13 @@
 # To push your project (that has a .git file) up to the server, create a new repository on the
   website (ex. GitHub).  Follow the instruction shown on the next page on how to add an existed
   project to the remote repository.
+
+*** origin = remote branch
+    origin/branch = local copy of the remote branch
+    
+    $ git fetch origin          <-- always fetch from remote branch
+    $ git checkout <branch>     <-- can only checkout local copy of the branch, so no need to
+                                    specify "origin"
+    $ git rebase origin/master  <-- rebase local copy of master from remote master branch
+    $ git rebase master         <-- rebase from local copy of master
+    $ git push origin           <-- always push to remote branch
