@@ -13,7 +13,7 @@
 
 # Install docker, https://docs.docker.com/install/
 
-# Install docker-compose, https://docs.docker.com/compose/install/
+# For Ubuntu, install docker-compose, https://docs.docker.com/compose/install/
 
 ** To use docker without sudo, create a docker group and add current user into it, activate the
    changes after that:
@@ -21,25 +21,30 @@
    $ sudo usermod -aG docker $USER
    $ newgrp docker
 
+# For Mac, install iTerm2, https://www.iterm2.com
+
+# For Mac, open iTerm2, install brew:
+(home)$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null 2> /dev/null
+
 # Install tmux:
-(home)$ sudo apt-get install tmux
+  For Ubuntu, (home)$ sudo apt-get install tmux
+  For Mac, (home)$ brew install tmux
 
-# Copy the ".tmux.conf" file from "https://github.com/rinnsio/notes/blob/master/.tmux.conf"
-  to the "home" directory.  Then launch tmux to start coding:
+# Copy ".tmux.conf", ".bash_profile", ".bashrc" and ".vimrc" to "home" directory.  Then launch
+  tmux to start coding:
 (any_dir)$ tmux
 
-** If changes made in the ".tmux.conf" file is not refreshed, kill all tmux sessions all the way
-   down, then start a new tmux session:
-(any_dir)$ tmux kill-server
+** If changes made in the ".tmux.conf" file is not refreshed, kill all tmux sessions, then start
+   a new tmux session:
+(any_dir)$ killall tmux
 (any_dir)$ tmux
 
-# Copy the ".vimrc" file from "https://github.com/rinnsio/notes/blob/master/.vimrc" to the "home" 
-  directory.
-
-# To use solarized colorscheme in terminal in Ubuntu:
-Click Terminal tab -> Preferences -> Unnamed -> Colors -> Text and Background Color -> Uncheck Use 
-colors from system theme -> Built-in schemes -> choose Solarized dark -> Palette -> Built-in schemes
- -> choose Solarized -> Close
+# To use solarized colorscheme in terminal:
+  For Ubuntu, click Terminal tab -> Preferences -> Unnamed -> Colors -> Text and Background Color
+  -> Uncheck Use colors from system theme -> Built-in schemes -> choose Solarized dark -> Palette
+  -> Built-in schemes -> choose Solarized -> Close
+  For Mac, click iTerm2 -> Preferences -> Profiles -> Colors -> Color Presets -> select
+  "Solarized Dark"
 
 # Install pathogen.vim in order to install plugins easily.  In any directory, copy and paste the
   below command:
