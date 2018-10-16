@@ -69,5 +69,8 @@ git clone https://github.com/altercation/vim-colors-solarized.git ~/.vim/bundle/
 :helptags ~/.vim/bundle/nerdtree/doc/
 :h NERDTree.txt
 
+# For Mac, install git and bash-completion:
+(home)$ brew install git bash-completion
+
 # To remove a folder and its content:
 (folder's_parent_dir)$ rm -rf (folder_name)
