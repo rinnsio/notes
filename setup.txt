@@ -70,7 +70,10 @@ git clone https://github.com/altercation/vim-colors-solarized.git ~/.vim/bundle/
 :h NERDTree.txt
 
 # For Mac, install git and bash-completion:
-(home)$ brew install git bash-completion
+(any_dir)$ brew install git bash-completion
+
+# To enable Typescript syntax in vim:
+(any_dir)$ cd ~/.vim/bundle git clone https://github.com/leafgarland/typescript-vim
 
 # To remove a folder and its content:
 (folder's_parent_dir)$ rm -rf (folder_name)
