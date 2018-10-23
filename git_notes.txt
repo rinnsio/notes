@@ -28,6 +28,9 @@
 ** Delete branch that's locally on the computer:
 (project_dir)$ git branch -D (branch_name)
 
+** Update the local list of remote branches:
+(project_fir)$ git remote update origin --prune
+
 # Change branch:
 (project_dir)$ git checkout (branch_name)
 
