@@ -12,5 +12,18 @@
 -Make sure the path in .bash_profile is the same as the below command shown:
  <user>$ brew reinstall chruby
 
--Make sure ruby is the latest version:
- <user>$ ruby -v
+-Install postgres on host:
+ <user>$ brew install postgresql
+
+-Make sure ruby is the latest version in the project repo:
+ $ cd <project_repo>
+ <project>$ ruby -v
+
+-For each ruby project, install bundle to run ruby command:
+<project>$ bundle
+
+*Gem install bundler if it's giving error running bundle
+ <project>$ gem install bundler
+
+-Every time changes made to the gem file (gem install something)
+ $ bundle
