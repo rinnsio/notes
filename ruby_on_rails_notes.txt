@@ -1,0 +1,16 @@
+-Download homebrew (brew):
+ <user>$ git clone https://github.com/Homebrew/brew homebrew
+
+-Copy .bashrc and .bash_profile to host (if not yet) from 
+-Restart terminal
+
+-Install ruby:
+ <user>$ brew install chruby
+ <user>$ brew install install-ruby
+ <user>$ install-ruby ruby
+
+-Make sure the path in .bash_profile is the same as the below command shown:
+ <user>$ brew reinstall chruby
+
+-Make sure ruby is the latest version:
+ <user>$ ruby -v
