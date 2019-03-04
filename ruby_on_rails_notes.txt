@@ -20,10 +20,10 @@
  <project>$ ruby -v
 
 -For each ruby project, install bundle to run ruby command:
-<project>$ bundle
+ <project>$ bundle
 
 *Gem install bundler if it's giving error running bundle
  <project>$ gem install bundler
 
 -Every time changes made to the gem file (gem install something)
- $ bundle
+ <project>$ bundle
