@@ -1,7 +1,7 @@
 -Download homebrew (brew):
  <user>$ git clone https://github.com/Homebrew/brew homebrew
 
--Copy .bashrc and .bash_profile to host (if not yet) from 
+-Copy .bashrc and .bash_profile to host (if not yet) from https://github.com/rinnsio/notes/blob/master/ruby_on_rails_notes.txt
 -Restart terminal
 
 -Install ruby:
