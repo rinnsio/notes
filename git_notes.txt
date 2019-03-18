@@ -65,6 +65,30 @@
 (project_dir)$ git checkout your_branch
 (project_dir)$ git rebase master
 
+** To show graph like gitx:
+(project_dir)$ git log --graph --oneline --decorate
+
+** To add changes by line like gitx:
+(project_dir)$ git add -p <file_name>
+
+# To update the to the commit it’s pointing to:
+(project_dir)$ git submodule update
+
+# To assign submodule to the latest commit:
+(project_dir)$ cd <submodule>
+(project_dir/submodule_dir)$ git fetch origin
+(project_dir/submodule_dir)$ git checkout master
+(project_dir/submodule_dir)$ git rebase origin/master
+(project_dir/submodule_dir)$ cd ..
+(project_dir)$ git commit
+(project_dir)$ git push
+
+** To remove all untracked files:
+(project_dir)$ git clean -d -f
+
+** To create local branch:
+(any_dir)$ git checkout <commit_id_if_need> -b <branch_name>
+
 ******************************************************************************************
 
 # To create local repository on command line.  First, create a project folder on your local
