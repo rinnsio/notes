@@ -40,7 +40,7 @@
 # To add, commit and push file to GitHub:
 (project_dir)$ git add (file1) (file2)
 (project_dir)$ git commit -m "(commit_msg)"
-(project_dir)$ git push
+(project_dir)$ git push origin
 
 ** To check what commits are made:
 (project_dir)$ git log
@@ -64,6 +64,12 @@
 (project_dir)$ git rebase origin/master
 (project_dir)$ git checkout your_branch
 (project_dir)$ git rebase master
+
+# To merge feature branch into master:
+(project_dir)$ git checkout master
+(project_dir)$ git pull origin
+(project_dir)$ git merge feature_branch --no-ff
+(project_dir)$ git push origin
 
 ** To show graph like gitx:
 (project_dir)$ git log --graph --oneline --decorate
