@@ -6,8 +6,8 @@
 
 -Install ruby:
  <user>$ brew install chruby
- <user>$ brew install install-ruby
- <user>$ install-ruby ruby
+ <user>$ brew install chruby ruby-install
+ <user>$ ruby-install ruby
 
 -Make sure the path in .bash_profile is the same as the below command shown:
  <user>$ brew reinstall chruby
